@@ -9,7 +9,7 @@ Feature: ATM withdrawal, rule multiple withdraws
 
     Scenario:
     User can withdraw money multiple times.
-      When User requests 200 dollars
-      And User requests 300 dollars
+      When User requests to withdraw 200 dollars
+      And User requests to withdraw 300 dollars
       Then User can withdraw 500 dollars
       And 500 dollars should be new account balance

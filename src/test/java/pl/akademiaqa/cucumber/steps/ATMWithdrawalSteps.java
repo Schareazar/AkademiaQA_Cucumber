@@ -5,6 +5,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.pl.Gdy;
+import io.cucumber.java.pl.Wtedy;
+import io.cucumber.java.pl.Zakładającże;
 import pl.akademiaqa.dto.AccountDTO;
 
 import java.util.List;
@@ -47,6 +50,35 @@ public class ATMWithdrawalSteps {
     @When("User sends confirmation letter")
     public void user_sends_confirmation_letter(String docString) {
         System.out.println(docString);
+    }
+
+    @Given("User's account is locked")
+    public void user_s_account_is_locked() {
+    }
+    @When("User requests to withdraw {int} dollars")
+    public void user_requests_to_withdraw_dollars(Integer int1) {
+    }
+    @Then("User can't withdraw any money")
+    public void user_can_t_withdraw_any_money() {
+    }
+    @Then("User's account should be still locked")
+    public void user_s_account_should_be_still_locked() {
+    }
+    @Then("User's account balance should not change")
+    public void user_s_account_balance_should_not_change() {
+    }
+
+    @Zakładającże("użytkownik posiada {int} złotych na koncie")
+    public void użytkownik_posiada_złotych_na_koncie(Integer int1) {
+    }
+    @Gdy("użytkownik spróbuje wypłacić {int} złotych z bankomatu")
+    public void użytkownik_spróbuje_wypłacić_złotych_z_bankomatu(Integer int1) {
+    }
+    @Wtedy("bankomat wypłaci {int} złotych użytkownikowi")
+    public void bankomat_wypłaci_złotych_użytkownikowi(Integer int1) {
+    }
+    @Wtedy("saldo konta zmieni się na {int} złotych")
+    public void saldo_konta_zmieni_się_na_złotych(Integer int1) {
     }
 
 }

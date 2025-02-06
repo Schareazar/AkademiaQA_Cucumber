@@ -3,9 +3,9 @@ Feature: ATM withdrawal scenario outline
 
   Scenario Outline:
   User should be able to withdraw money
-    Given User has <AccountBalance> in account
-    When User requests <RequestedAmount>
-    Then User can withdraw <WithdrawalAmount>
+    Given User has <AccountBalance> dollars in account
+    When User requests to withdraw <RequestedAmount> dollars
+    Then User can withdraw <WithdrawalAmount> dollars
 
     Examples: Positive balance
       | AccountBalance | RequestedAmount | WithdrawalAmount |
