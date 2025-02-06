@@ -3,9 +3,10 @@ Feature: ATM withdrawal
 
   Background:  User has positive balance
     Given User has positive balance in accounts
-      | saving account   | 50 |
-      | debit account    | 50 |
-      | personal account | 50 |
+      | account          | balance |
+      | saving account   | 50      |
+      | debit account    | 50      |
+      | personal account | 50      |
 
   Scenario:  User has positive account balance so he should be able to withdraw money.
     When User requests 250 dollars from ATM

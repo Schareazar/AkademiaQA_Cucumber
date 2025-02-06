@@ -1,8 +1,12 @@
 package pl.akademiaqa.cucumber.steps;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pl.akademiaqa.dto.AccountDTO;
+
+import java.util.List;
 
 public class ATMWithdrawalSteps {
 
@@ -10,6 +14,15 @@ public class ATMWithdrawalSteps {
     @Given("User has {int} dollars in account(s)/bank")
     public void user_has_dollars_in_account(Integer int1) {
         System.out.println("Dollars in account " + int1);
+    }
+
+    @Given("User has positive balance in accounts")
+    public void user_has_positive_balance_in_accounts(List<AccountDTO> accounts) {
+
+        for (AccountDTO account:accounts)
+        {
+            System.out.println(account.getAccountName() + account.getAccountBalance());
+        }
     }
 //Regular expression
 //    @Given("^User has (\\d+) dollars in (?:account|accounts|bank)$")
