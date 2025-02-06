@@ -1,6 +1,7 @@
 package pl.akademiaqa.cucumber.steps;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -21,7 +22,7 @@ public class ATMWithdrawalSteps {
 
         for (AccountDTO account:accounts)
         {
-            System.out.println(account.getAccountName() + account.getAccountBalance());
+            System.out.println(account.getAccountName() + " " + account.getAccountBalance());
         }
     }
 //Regular expression
@@ -30,7 +31,7 @@ public class ATMWithdrawalSteps {
 //        System.out.println("Dollars in account " + int1);
 //    }
 
-    @When("User requests {int} dollars from ATM")
+    @When("User requests {int} dollars from ATM/bank")
     public void user_requests_dollars_from_atm(Integer int1) {
         System.out.println("Dollars requested " + int1);
     }
@@ -42,4 +43,10 @@ public class ATMWithdrawalSteps {
     public void dollars_should_be_new_account_balance(Integer int1) {
         System.out.println("Updated account balance " + int1);
     }
+
+    @When("User sends confirmation letter")
+    public void user_sends_confirmation_letter(String docString) {
+        System.out.println(docString);
+    }
+
 }
